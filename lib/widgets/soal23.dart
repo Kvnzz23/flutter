@@ -24,28 +24,47 @@ class Soal23 extends StatelessWidget {
         ],
       ),
       body: Center(
-        child: Stack(
-          alignment: Alignment.center,
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Container(
-              height: 220,
-              width: 220,
-              decoration: BoxDecoration(
-                color: Colors.blue,
-                shape: BoxShape.circle,
-              ),
+            Stack(
+              alignment: Alignment.center,
+              children: [
+                Container(
+                  height: 210,
+                  width: 210,
+                  decoration: BoxDecoration(
+                    color: Colors.blue,
+                    shape: BoxShape.circle,
+                  ),
+                ),
+                Container(
+                  width: 200,
+                  height: 200,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(200 / 2),
+                    border: Border.all(width: 10, color: Colors.white),
+                    color: Colors.blueAccent,
+                    image: DecorationImage(
+                      fit: BoxFit.cover,
+                      image: NetworkImage(
+                        "https://picsum.photos/id/180/200/300",
+                      ),
+                    ),
+                  ),
+                ),
+              ],
             ),
-            Container(
-              width: 200,
-              height: 200,
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(200 / 2),
-                border: Border.all(width: 10, color: Colors.white),
-                color: Colors.blueAccent,
-                image: DecorationImage(
-                  fit: BoxFit.cover,
-                  image: NetworkImage("https://picsum.photos/id/180/200/300"),
-                ), // Membuat bentuk lingkaran otomatis
+            Padding(
+              padding: const EdgeInsets.only(top: 10),
+              child: Text(
+                "Hello World",
+                style: TextStyle(
+                  fontSize: 30,
+                  fontWeight: FontWeight.bold,
+                  fontStyle: FontStyle.italic,
+                  decoration: TextDecoration.underline,
+                ),
               ),
             ),
           ],
