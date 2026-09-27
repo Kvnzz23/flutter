@@ -23,6 +23,7 @@ import './widgets/soal20.dart';
 import './widgets/soal21.dart';
 import './widgets/soal22.dart';
 import './widgets/soal23.dart';
+import './widgets/soal24.dart';
 
 void main() {
   runApp(MyApp());
@@ -35,39 +36,8 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: Scaffold(
-        appBar: AppBar(
-          backgroundColor: Colors.blue,
-          leading: Padding(
-            padding: const EdgeInsets.all(10),
-            child: FlutterLogo(),
-          ),
-          title: Text("Text Judul", style: TextStyle(color: Colors.white)),
-          actions: [
-            IconButton(
-              onPressed: () {},
-              icon: Icon(Icons.more_vert, color: Colors.white),
-            ),
-          ],
-        ),
-        body: Padding(
-          padding: const EdgeInsets.all(20),
-          child: Column(
-            children: [
-              ListView.builder(
-                scrollDirection: Axis.horizontal,
-                itemCount: 10,
-                itemBuilder: (context, index) => Row(
-                  children: [
-                    Container(width: 100, height: 100, color: Colors.red),
-                    SizedBox(width: 20),
-                  ],
-                ),
-              ),
-            ],
-          ),
-        ),
-      ),
+      home: Soal24(),
     );
   }
 }
+
